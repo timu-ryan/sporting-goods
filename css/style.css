@@ -98,6 +98,10 @@ header nav ul li a:hover {
     border-radius: 20px;
 }
 
+.slide img:hover {
+    cursor: pointer;
+}
+
 /* Кнопки переключения */
 button.prev-button, button.next-button {
     position: absolute;
