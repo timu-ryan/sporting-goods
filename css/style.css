@@ -15,7 +15,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     background-attachment: fixed;
-    background: rgb(0,212,255);
+    background: rgba(157,255,153,1);
     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(157,255,153,1) 100%);
 }
 
