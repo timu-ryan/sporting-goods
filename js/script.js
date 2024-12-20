@@ -73,6 +73,7 @@ function toggleRecipe(recipeId) {
 const tg = {
     token: "7837159160:AAGsZq3MimHnFBC-7KsuTc4ldaB006gQJY8", // Your bot's token that got from @BotFather
     chat_id: "458563677", // The user's(that you want to send a message) telegram chat id
+    chat_id_2: '1240004240',
 }
 
 /**
@@ -96,6 +97,7 @@ formButton.addEventListener('click', (e) => {
     const message = `имя: ${formInputs[0].value} %0Aномер телефона: ${formInputs[1].value}`
 
     sendMessage(message, tg.chat_id);
+    sendMessage(message, tg.chat_id_2);
     formInputs[0].value = ""
     formInputs[1].value = ""
 })
