@@ -1,0 +1,610 @@
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    --font-color-dark: rgb(70, 70, 70);
+}
+
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif; /* Основной шрифт */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    /* background: rgb(51,51,51);
+    background: linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(58,14,96,1) 100%); */
+    background-attachment: fixed;
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(157,255,153,1) 100%);
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* Шапка */
+header {
+    /* background: rgba(51,51,51,1); */
+    color: var(--font-color-dark);
+    padding: 20px;
+    text-align: center;
+    /* font-family: 'Playfair Display', serif; Шрифт для заголовков */
+}
+
+header .logo h1 {
+    font-size: 3rem;
+    margin: 60px 0 40px;
+    font-weight: 700; /* Жирный шрифт для логотипа */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Эффект тени для объема */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: var(--font-color-dark);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif; /* Шрифт для навигации */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Легкий эффект тени */
+}
+
+header nav ul li a:hover {
+    color: var(--font-color-dark);
+    opacity: 0.7;
+}
+
+/* Слайдер */
+.slider {
+    position: relative;
+    width: 45%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 35vh;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .slider {
+        width: 90%;
+    }
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* Кнопки переключения */
+button.prev-button, button.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+button.prev-button {
+    left: 10px;
+}
+
+button.next-button {
+    right: 10px;
+}
+
+button.prev-button:hover, button.next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Секция "Обо мне" */
+#about {
+    /* background: linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(58,14,96,1) 100%); */
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    text-align: center;
+    color: var(--font-color-dark);
+    
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,0.7) 0%, rgba(157,255,153,0.7) 100%);
+}
+
+/* Заголовок секции "Обо мне" */
+#about h2 {
+    /* font-family: 'Playfair Display', serif; */
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Контейнер для текста и изображения */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Фотография */
+.about-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5%;
+    /* border: 5px solid #f8c1c7; */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    object-position: top;
+}
+
+/* Текстовое описание */
+.about-text {
+    max-width: 640px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        /* text-align: center; */
+    }
+    .about-photo {
+        margin-bottom: 20px;
+    }
+}
+
+/* Секции */
+section {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Montserrat', sans-serif; /* Шрифт для секций */
+}
+
+/* Галерея */
+#gallery h2 {
+    font-size: 2.5rem;
+    color: var(--font-color-dark);
+    text-transform: uppercase; /* Заглавные буквы */
+    letter-spacing: 2px; /* Расстояние между буквами */
+    margin-bottom: 20px;
+}
+
+/* Сетка галереи */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery-grid div a {
+    cursor: pointer;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    height: 90%;
+    object-position: center;
+}
+.gallery-grid p {
+    color: var(--font-color-dark);
+    margin: 0 0 10px;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Видео */
+.video {
+    margin: auto auto 60px;
+}
+
+#video h2 {
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.5rem;
+    color: var(--font-color-dark);
+    text-transform: uppercase; /* Заглавные буквы */
+    letter-spacing: 2px; /* Расстояние между буквами */
+    margin-bottom: 20px;
+}
+
+#video iframe {
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .video {
+        max-width: 90%;
+    }
+
+    .video iframe {
+        max-width: 100%;
+    }
+    #video h2 {
+        font-size: 25px;
+    }
+
+}
+
+/* Секция рецептов */
+#recipes {
+    background: rgba(255, 228, 225, 0.8); /* Светлый пастельный фон */
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#recipes h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Тень для заголовков */
+}
+
+/* Сетка рецептов */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #555;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Тень для текста */
+}
+
+.recipe-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin: 0 10px 15px;
+}
+
+/* Подвал */
+footer {
+    /* background: #333; */
+    color: var(--font-color-dark);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Шрифт для подвала */
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+footer ul li a {
+    color: var(--font-color-dark);
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Легкий эффект тени */
+}
+
+footer ul li a:hover {
+    color: #f8c1c7;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .slider {
+        height: 40vh;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Скрываем все панели рецептов по умолчанию */
+.recipe-details {
+    display: none;
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Вы можете добавить стили для панелей, если хотите, например, для открытия */
+.recipe-details.show {
+    display: block;
+}
+
+/* Стиль для кнопки "Подробнее" */
+.recipe-btn {
+    margin-top: 10px;
+    background-color: #f8c1c7;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-btn:hover {
+    background-color: #f4979d;
+}
+
+
+.heroes-section {
+    
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(157,255,153,1) 100%);
+    color: var(--font-color-dark);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.heroes {
+    /* background-color: #333; */
+    color: var(--font-color-dark);
+    width: 100%;
+    border: 1px solid green;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .heroes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .heroes {
+        grid-template-columns: 1fr;
+    }
+}
+
+.heroes__button {
+    color: var(--font-color-dark);
+    height: 50px;
+    width: 90%;
+    background: transparent;
+    border: 1px solid gray;
+}
+
+.heroes__button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.heroes__description img {
+    margin: 15px 0 0;
+    max-width: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    display: none;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto 100px;
+    
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(157,255,153,1) 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 0 0 30px;
+    max-width: calc(500px + 10%);
+}
+
+.form__heading {
+    color: var(--font-color-dark);
+}
+
+.form__input {
+    color: var(--font-color-dark);
+    width: 90%;
+    max-width: 500px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin: 0 auto 10px;
+    height: 30px;
+}
+
+.form__input-field {
+    color: var(--font-color-dark);
+    align-self: center;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form__button {
+    color: var(--font-color-dark);
+    width: 90%;
+    max-width: 500px;
+    background-color: transparent;
+    border: 1px solid grey;
+    height: 40px;
+    margin: 20px auto 0;
+}
+
+.form__button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    z-index: 101;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    z-index: 101;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    z-index: 101;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 101;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }

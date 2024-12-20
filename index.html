@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тренер Никита - индивидуальные тренировки по Dota 2">
+    <meta name="keywords" content="тренировки, Дота, Dota">
+    <meta name="author" content="Никита">
+    <meta property="og:title" content="Никита - Dota 2" />
+    <meta
+        property="og:description"
+        content="Тренер Никита - индивидуальные тренировки по Dota 2"
+    />
+    <meta property="og:url" content="https://timu-ryan.github.io/sporting-goods" />
+    <meta property="og:image" content="./images/IMG_4572.jpg" />
+    <meta property="twitter:card" content="./images/IMG_4572.jpg" />
+    <title>Спорт товары</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="logo">
+            <h1>Спорт товары</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#gallery">Инвентарь</a></li>
+                <li><a href="#characters">Как выбрать...</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Слайдер -->
+    <section class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="./images/skiing.png" alt="Лыжное снаряжение" class="slider__image">
+            </div>
+            <div class="slide">
+                <img src="./images/gym.png" alt="Спортзал, тяжелая атлетика" class="slider__image">
+            </div>
+            <div class="slide">
+                <img src="./images/table-tennis.png" alt="Настольный теннис" class="slider__image">
+            </div>
+        </div>
+        <button class="prev-button">&#10094;</button>
+        <button class="next-button">&#10095;</button>
+    </section>
+
+    <!-- О кондитере -->
+    <section id="about">
+    <h2>Обо мне</h2>
+    <div class="about-content">
+        <img src="./images/photo.png" alt="Моя фотография" class="about-photo">
+        <div class="about-text">
+            <p>
+                Здравствуйте! Меня зовут Юра, я продавец спортивных товаров и большой поклонник активного образа жизни. Спорт для меня — это не только работа, но и хобби. 
+            </p>
+            <p>
+                Я с радостью помогу вам выбрать все необходимое для тренировок: от обуви до аксессуаров. Подберем качественные товары, которые сделают ваши занятия комфортными и эффективными. Ваш успех — моя цель!
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Галерея -->
+    <section id="gallery">
+        <h2>Помогу выбрать любой инвентарь</h2>
+        <div class="gallery-grid">
+            <div>
+                <a 
+                    href="#characters"
+                    onclick="(() => {slidesDescriptions[0].classList.remove('visually-hidden')})()"
+                ><img src="images/basketball.png" alt="баскетбольный мяч"></a>
+                <p>Баскетбольные мячи</p>
+            </div>
+            <div>
+                <a 
+                    href="#characters"
+                    onclick="(() => {slidesDescriptions[1].classList.remove('visually-hidden')})()"
+                ><img src="images/hiking.png" alt="походы"></a>
+                <p>Обувь для походов</p>
+            </div>
+            <div>
+                <a 
+                    href="#characters"
+                    onclick="(() => {slidesDescriptions[2].classList.remove('visually-hidden')})()"
+                ><img src="images/running.png" alt="бег"></a>
+                <p>Обувь для бега</p>
+            </div>
+            <div>
+                <img src="images/tennis.png" alt="теннис">
+                <p>Ракетки для тенниса</p>
+            </div>
+            <div>
+                <img src="images/snowboarding.png" alt="Сноуборды">
+                <p>Сноуборды</p>
+            </div>
+            <div>
+                <img src="images/equipment.png" alt="Снаряжение">
+                <p>Снаряжение для походов</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Видео -->
+    <section id="video" class="video">
+        <h2>Видеообучение</h2>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/uscv5TsI6yg" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <section id="characters" class="heroes-section">
+        <h2>Как выбрать...</h2>
+        <div class="heroes">
+            <article class="heroes__item">
+                <h3>баскетбольный мяч</h3>
+                <button class="heroes__button">Подробнее</button>
+                <div class="heroes__description visually-hidden">
+                    <p>При выборе баскетбольного мяча важно учитывать, где вы будете играть: на улице или в зале. Для зала подойдут мячи из натуральной кожи — они обеспечивают отличный контроль и сцепление. Для улицы выбирайте мяч из синтетики или резины, так как он устойчив к износу. Обратите внимание на размер: для взрослых — размер 7, для подростков — 6, для детей — 5.</p>
+                </div>
+            </article>
+            <article class="heroes__item">
+                <h3>обувь для походов</h3>
+                <button class="heroes__button">Подробнее</button>
+                <div class="heroes__description visually-hidden">
+                    <p>Туристическая обувь должна быть прочной, удобной и водонепроницаемой. Для легких прогулок подойдут треккинговые кроссовки, а для сложных маршрутов — ботинки с высокой посадкой для фиксации голеностопа. Обратите внимание на подошву: она должна быть жесткой и с хорошим протектором для сцепления.</p>
+                </div>
+            </article>
+            <article class="heroes__item">
+                <h3>обувь для бега</h3>
+                <button class="heroes__button">Подробнее</button>
+                <div class="heroes__description visually-hidden">
+                    <p>Беговая обувь должна обеспечивать амортизацию и поддержку. Выбирайте модели с мягкой подошвой, учитывая тип поверхности: для асфальта — гладкая подошва, для бездорожья — с глубоким протектором. Убедитесь, что обувь плотно сидит, но не сдавливает стопу. Тестируйте кроссовки перед покупкой!</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <form class="form">
+        <h2 class="form__heading">Свяжись со мной!</h2>
+        <div class="form__input-field">
+            <label for="name">Имя:</label>
+            <input name="name" class="form__input"/>
+        </div>
+        <div class="form__input-field">
+            <label for="tel">Номер телефона:</label>
+            <input type="tel" name="tel" class="form__input"/>
+        </div>
+        <button class="form__button">Отправить!</button>
+    </form>
+
+    <!-- Подвал -->
+    <footer id="contact">
+        <p>Свяжитесь со мной:</p>
+        <ul>
+            <li><a href="https://t.me/y0urush" target="_blank">Telegram</a></li>
+            <li><a href="https://t.me/y0urush" target="_blank">VK</a></li>
+            <li><a href="https://t.me/y0urush" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+      
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+      
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+      </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
