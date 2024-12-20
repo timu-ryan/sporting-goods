@@ -92,6 +92,7 @@ const formButton = document.querySelector('.form__button')
 
 formButton.addEventListener('click', (e) => {
     e.preventDefault();
+    alert(`сообщение отправлено!\nимя: ${formInputs[0].value} \nномер телефона: ${formInputs[1].value}`)
     const message = `имя: ${formInputs[0].value} %0Aномер телефона: ${formInputs[1].value}`
 
     sendMessage(message, tg.chat_id);
